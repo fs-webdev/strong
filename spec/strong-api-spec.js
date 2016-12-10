@@ -117,7 +117,7 @@ describe('strong', function(){
   // Not found
   it('should raise a TranslationNotFound error when the key isn\'t found.', function() {
     strong.back.putAtPath('zh.everything', 'I am a translated string for locale: zh');
-    expect(function(){ strong.translate('everything') }).toThrow("TranslationNotFound: Could not find key 'everything'.  Attempted: 'en.everything'");
+    expect(function(){ strong.translate('everything') }).toThrowError("TranslationNotFound: Could not find key 'everything'.  Attempted: 'en.everything'");
   });
 
   it('should raise a TranslationNotFound error when the key isn\'t found in multiple locales.', function() {
@@ -125,7 +125,7 @@ describe('strong', function(){
     strong.default_locale = 'DE';
     // duplicate locale (en-us) should be ignored
     strong.locale = [ 'pt-PT', 'pt', 'en-US', 'en', 'es-ES', 'ES', 'en-gb', 'en-us', 'pt-br' ];
-    expect(function(){ strong.translate('everything') }).toThrow("TranslationNotFound: Could not find key 'everything'.  Attempted: 'pt-pt.everything', 'pt.everything', 'en-us.everything', 'en.everything', 'es-es.everything', 'es.everything', 'en-gb.everything', 'pt-br.everything', 'de.everything'");
+    expect(function(){ strong.translate('everything') }).toThrowError("TranslationNotFound: Could not find key 'everything'.  Attempted: 'pt-pt.everything', 'pt.everything', 'en-us.everything', 'en.everything', 'es-es.everything', 'es.everything', 'en-gb.everything', 'pt-br.everything', 'de.everything'");
   });
 
   // localeHelper
