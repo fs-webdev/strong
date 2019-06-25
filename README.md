@@ -1,24 +1,16 @@
 Strong i18n
 ===========
 
-Simply the best way to internationalize your Node.js app if you're
-serious about your work.
+> *Note:* This project is no longer maintained. Please update to another solution.
 
-[![Build Status](https://buildhive.cloudbees.com/job/fs-webdev/job/strong/badge/icon)](https://buildhive.cloudbees.com/job/fs-webdev/job/strong/)
+Internationalization tools for Node.js and Express.
 
 Install It
 ----------
 
 Add it to your `package.json`:
 
-    "dependencies": {
-        ...
-      , "strong": ">= 0.1.0"
-    }
-
-And then install app dependencies:
-
-    npm install -d
+    npm install strong
 
 
 Use It
