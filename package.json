@@ -1,7 +1,7 @@
 {
   "name": "strong",
   "description": "Strong i18n for Express.js-based applications",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "author": "FamilySearch Web Developers",
   "contributors": [
     {
@@ -17,25 +17,19 @@
       "email": "allredlt@familysearch.org"
     }
   ],
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://github.com/fs-webdev/strong/raw/master/LICENSE"
-    }
-  ],
+  "license" : "MIT",
   "dependencies": {
     "glob": "^7.1.1",
     "sprintf": "^0.1.5",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "codeclimate-test-reporter": "^0.4.0",
-    "istanbul": "^0.4.5",
     "jasmine-node": "^1.14.5",
-    "jsdom": "^9.8.3"
+    "jsdom": "^9.8.3",
+    "nyc": "^11.9.0"
   },
   "engines": {
-    "node": ">= 0.4.0"
+    "node": ">= 4.0.0"
   },
   "keywords": [
     "framework",
@@ -53,7 +47,7 @@
     "extract": "./bin/extract"
   },
   "scripts": {
-    "test": "istanbul cover jasmine-node spec",
+    "test": "nyc jasmine-node spec",
     "prepublish": "npm prune"
   }
 }

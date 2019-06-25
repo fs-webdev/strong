@@ -1,18 +1,19 @@
 language: node_js
 node_js:
   - "node"
+  - "10"
+  - "8"
   - "6"
   - "4"
-sudo: false
-env:
-  - CXX=g++-4.8
-addons:
-  code_climate:
-    repo_token: $CODECLIMATE_REPO_TOKEN
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-4.8
-after_success:
-  - codeclimate-test-reporter < reports/coverage/lcov.info
+dist: trusty
+branches:
+  only:
+    - master
+
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
