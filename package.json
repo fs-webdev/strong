@@ -1,7 +1,7 @@
 {
   "name": "strong",
   "description": "Strong i18n for Express.js-based applications",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "author": "FamilySearch Web Developers",
   "contributors": [
     {
@@ -24,9 +24,9 @@
     "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "jasmine-node": "^1.14.5",
-    "jsdom": "^9.8.3",
-    "nyc": "^11.9.0"
+    "jasmine-node": "^3.0.0",
+    "jsdom": "^16.2.2",
+    "nyc": "^15.1.0"
   },
   "engines": {
     "node": ">= 4.0.0"
