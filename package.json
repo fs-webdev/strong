@@ -17,7 +17,7 @@
       "email": "allredlt@familysearch.org"
     }
   ],
-  "license" : "MIT",
+  "license": "MIT",
   "dependencies": {
     "glob": "^7.1.1",
     "sprintf": "^0.1.5",
